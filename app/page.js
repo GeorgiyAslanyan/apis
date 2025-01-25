@@ -10,8 +10,9 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div  id='#contacts'  className="flex flex-col items-center justify-center">
-      <div className="max-w-[1050px] mx-10">
         <Hero />
+
+      <div className="max-w-[1050px] mx-10">
         <div className=" flex flex-col gap-10">
           <About />
           <HowItWorks />

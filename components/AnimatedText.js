@@ -18,14 +18,15 @@ const AnimatedText = ({ text }) => {
           },
         },
       }}
-      viewport={{ once: true, amount: 0.8}} // Анимация сработает только один раз, когда элемент будет виден на 50%
+      viewport={{ once: false, amount: 0.8}} // Анимация сработает только один раз, когда элемент будет виден на 50%
     >
       {words.map((word, wordIndex) => (
         <motion.span
           key={wordIndex}
           style={{ whiteSpace: 'nowrap' }} // Предотвращаем перенос внутри слова
           initial={{ opacity: 0, y: 5 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.8}}
           transition={{ delay: wordIndex * 0.1, duration: 0.1 }} // Настройте задержку и длительность анимации
         >
           {word}{'\u00A0'} {/* Добавляем пробел после каждого слова */}
