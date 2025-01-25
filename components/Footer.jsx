@@ -29,7 +29,8 @@ const Footer = () => {
                 <a href="http://" target="_blank" rel="noopener noreferrer">Medium</a>
             </div>
             <div className='flex flex-col col-span-1 gap-4 pr-10'>
-                <a href="http://" target="_blank" rel="noopener noreferrer" className='w-fit border-white px-5 py-2 border'>Contact Us</a>
+                <a href="http://" target="_blank" rel="noopener noreferrer" 
+                className='w-fit border-white px-5 py-2 border hover:bg-white hover:text-black transition-all ease-linear duration-100'>Contact Us</a>
             </div>
         </div>
     )

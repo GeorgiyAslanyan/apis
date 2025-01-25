@@ -15,7 +15,8 @@ const Navbar = () => {
                 <a href="#tokenomics">tokenomics</a>
                 <a href="#roadmap">roadmap</a>
             </div>
-            <a href="http://" target="_blank" rel="noopener noreferrer" className='border-white px-5 py-2 border'>
+            <a href="http://" target="_blank" rel="noopener noreferrer" 
+            className='border-white px-5 py-2 border hover:bg-white hover:text-black transition-all ease-linear duration-100'>
                 Buy on Uniswap</a>
         </div>
     )
