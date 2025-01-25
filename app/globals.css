@@ -19,3 +19,8 @@
 body {
   font-family: 'BPmono', sans-serif;
 }
+
+button, a {
+  text-wrap-mode: nowrap;
+  text-wrap: nowrap;
+}
