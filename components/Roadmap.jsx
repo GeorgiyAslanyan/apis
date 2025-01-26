@@ -46,10 +46,10 @@ const Roadmap = () => {
             whileInView={{ opacity: 1, scale: 1 }} // Анимация при появлении в области видимости
             viewport={{ once: true }} // Анимация сработает только один раз
             transition={{ 
-              duration: 0.6, 
+              duration: 0.3, 
               delay: index * 0.3, // Задержка для каждого блока
               type: "spring", // Пружинный эффект
-              stiffness: 100, // Жесткость пружины
+              stiffness: 20, // Жесткость пружины
               damping: 10, // Затухание
             }}
           >
