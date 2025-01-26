@@ -1,39 +1,28 @@
-import { motion } from 'framer-motion';
-import { useRef } from 'react';
+'use client'
+import { useEffect, useRef } from 'react';
+import Typed from 'typed.js';
 
-const AnimatedText = ({ text }) => {
-  const words = text.split(' ');
-  const scrollRef = useRef(null)
+const AnimatedText = () => {
+  const el = useRef(null);
 
-  return (
-    <motion.div ref={scrollRef}
-      className='flex flex-wrap max-w-full' 
-      initial="hidden"
-      whileInView="visible"
-      variants={{
-        hidden: {}, // Начальное состояние (невидимо)
-        visible: { // Состояние, когда элемент виден
-          transition: {
-            staggerChildren: 0.1, // Задержка между анимацией каждого слова
-          },
-        },
-      }}
-      viewport={{ once: false, amount: 0.8}} // Анимация сработает только один раз, когда элемент будет виден на 50%
-    >
-      {words.map((word, wordIndex) => (
-        <motion.span
-          key={wordIndex}
-          style={{ whiteSpace: 'nowrap' }} // Предотвращаем перенос внутри слова
-          initial={{ opacity: 0, y: 5 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.8}}
-          transition={{ delay: wordIndex * 0.1, duration: 0.1 }} // Настройте задержку и длительность анимации
-        >
-          {word}{'\u00A0'} {/* Добавляем пробел после каждого слова */}
-        </motion.span>
-      ))}
-    </motion.div>
-  );
+  useEffect(() => {
+    const options = {
+      strings: ['New Era of Digital Marketing', 'Revolutionizing Digital Outreach', 'The Digital Transformation Wave'],
+      typeSpeed: 30,
+      backSpeed: 30,
+      backDelay: 4000, // Задержка перед стиранием текста (2 секунды)
+      loop: true,
+      showCursor: false,
+    };
+
+    const typed = new Typed(el.current, options);
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
+  return <span ref={el} />;
 };
 
 export default AnimatedText;

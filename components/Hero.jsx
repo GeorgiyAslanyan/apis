@@ -1,41 +1,35 @@
-import React from 'react'
+'use client'; // Убедитесь, что компонент выполняется на стороне клиента
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import AnimatedText from './AnimatedText';
 
 const Hero = () => {
-    return (
-        <div className='min-h-[100vh] pt-[100px] px-[100px]'>
-            <div className='min-h-[60vh] grid-cols-2 grid'>
-                <div className='w-full h-full flex flex-col gap-3 items-start justify-center'>
-                    <h1 className='text-[40px]'>Every trade count</h1>
-                    <div className='flex gap-7'>
-                        <a href="http://" target="_blank" rel="noopener noreferrer" 
-                        className='border-white px-5 py-2 border hover:bg-white hover:text-black transition-all ease-linear duration-100'>Documentation</a>
-                        <a href="http://" target="_blank" rel="noopener noreferrer" 
-                        className='border-white px-5 py-2 border hover:bg-white hover:text-black transition-all ease-linear duration-100'>Go to app</a>
-                    </div>
-                </div>
-                <div className='w-full h-full flex items-center justify-center'>
-                    <video className='max-h-[50vh]' controls={false} preload="auto" autoPlay muted loop>
-                        <source src="/hero/hero.webm" type="video/webm" />
-                        Ваш браузер не поддерживает тег video.
-                    </video>
-                </div>
-            </div>
-            <div className='w-full flex gap-7 items-center justify-center'>
-                <div className='flex flex-col items-center gap-2'>
-                    <p className='text-teal-500 text-xl'>67</p>
-                    <p>metrics 1</p>
-                </div>
-                <div className='flex flex-col items-center gap-2'>
-                    <p className='text-teal-500 text-xl'>76%</p>
-                    <p>metrics 2</p>
-                </div>
-                <div className='flex flex-col items-center gap-2'>
-                    <p className='text-teal-500 text-xl'>$26,765</p>
-                    <p>metrics 3</p>
-                </div>
-            </div>
-        </div>
-    )
-}
+  return (
+    <motion.section
+      className="pt-[70px] m-6"
+      id="whatis"
+      style={{ minHeight: 'calc(100vh - 70px)' }}
+      initial={{ opacity: 0 }} // Начальное состояние (невидим)
+      animate={{ opacity: 1 }} // Конечное состояние (полностью видим)
+      transition={{ duration: 1, ease: 'easeInOut' }} // Плавная анимация
+    >
+      <div
+        className="bg-zinc-100 text-center rounded-xl flex flex-col items-center justify-center"
+        style={{ height: 'calc(100vh - 124px)' }}
+      >
+        <h1 className="text-4xl sm:text-5xl font-semibold mb-6 min-h-[65px]">
+          <AnimatedText />
+        </h1>
+        <a
+          href="#getstarted"
+          className="px-6 py-3 bg-teal-500 text-white text-lg rounded-full hover:bg-teal-600"
+        >
+          Get Started
+        </a>
+      </div>
+    </motion.section>
+  );
+};
 
-export default Hero
+export default Hero;

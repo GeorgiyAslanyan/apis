@@ -2,23 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'BPmono';
-  src: url('/fonts/BPmonoBold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'BPmono';
-  src: url('/fonts/BPmono.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-body {
-  font-family: 'BPmono', sans-serif;
-}
 
 button, a {
   text-wrap-mode: nowrap;
