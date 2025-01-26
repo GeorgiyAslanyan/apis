@@ -19,9 +19,7 @@ const WhatIs = () => {
         viewport={{ once: true }} // Анимация сработает только один раз
         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }} // Задержка для текста
       >
-        apis (apisoard) is a decentralized protocol based on Telegram that allows businesses to advertise
-        their services while providing users with the opportunity to earn by using their digital assets on
-        advertising platforms.
+        APIS is an innovative protocol that combines advanced machine learning, artificial intelligence, and financial analysis technologies to create a highly efficient trading bot.
       </motion.p>
     </section>
   );

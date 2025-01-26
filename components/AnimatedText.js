@@ -7,7 +7,7 @@ const AnimatedText = () => {
 
   useEffect(() => {
     const options = {
-      strings: ['New Era of Digital Marketing', 'Revolutionizing Digital Outreach', 'The Digital Transformation Wave'],
+      strings: ['Every trade count'],
       typeSpeed: 30,
       backSpeed: 30,
       backDelay: 4000, // Задержка перед стиранием текста (2 секунды)

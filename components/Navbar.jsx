@@ -25,13 +25,13 @@ const Navbar = () => {
           How it works?
         </a>
         <a href="#benefits" className="text-lg font-semibold hover:text-teal-500">
-          Benefits
+          Tokenomics
         </a>
         <a href="#roadmap" className="text-lg font-semibold hover:text-teal-500">
           Roadmap
         </a>
-        <a href="#blog" className="text-lg font-semibold hover:text-teal-500">
-          Blog
+        <a href="#about" className="text-lg font-semibold hover:text-teal-500">
+          About
         </a>
       </nav>
       <div className="flex gap-3 items-center">

@@ -8,28 +8,36 @@ const Roadmap = () => {
   return (
     <section className="py-16 px-4 rounded-xl bg-gray-50" id="roadmap">
       <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8"><TypedTextOne text={"Roadmap"}/></h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-3">
         {[
           {
-            title: 'Phase I',
-            description: 'Q1 2025: Foundation',
+            title: 'Q1 2025 - Phase I',
+            description1: 'Public Demonstration of Efficiency',
+            description2: 'Launching a trading account on ByBIT with a $20,000 capital;',
+            description3: 'Integration with the Telegram bot for publishing real-time trading signals;',
+            description4: 'Demonstrating the bot’s effectiveness during one month of public trading.',
           },
           {
-            title: 'Phase II',
-            description: 'Q2 2025: Development & Partnerships',
+            title: 'Q2 2025 - Phase II',
+            description1: 'Public Demonstration of Efficiency',
+            description2: 'Launching a trading account on ByBIT with a $20,000 capital;',
+            description3: 'Integration with the Telegram bot for publishing real-time trading signals;',
+            description4: 'Demonstrating the bot’s effectiveness during one month of public trading.',
           },
           {
-            title: 'Phase III',
-            description: 'Q3 2025: Launching of a New Era',
+            title: 'Q3 2025 - Phase III',
+            description1: 'Public Demonstration of Efficiency',
+            description2: 'Launching a trading account on ByBIT with a $20,000 capital;',
+            description3: 'Integration with the Telegram bot for publishing real-time trading signals;',
+            description4: 'Demonstrating the bot’s effectiveness during one month of public trading.',
           },
           {
-            title: 'Phase IV',
-            description: 'Q4 2025: Expanding Features',
-          },
-          {
-            title: 'Phase V',
-            description: 'Q1 2026: Completion Monetization',
-          },
+            title: 'Q4 2025 - Phase IV',
+            description1: 'Public Demonstration of Efficiency',
+            description2: 'Launching a trading account on ByBIT with a $20,000 capital;',
+            description3: 'Integration with the Telegram bot for publishing real-time trading signals;',
+            description4: 'Demonstrating the bot’s effectiveness during one month of public trading.',
+          }
         ].map((phase, index) => (
           <motion.div
             key={index}
@@ -45,8 +53,11 @@ const Roadmap = () => {
               damping: 10, // Затухание
             }}
           >
-            <h3 className="font-semibold text-xl mb-4">{phase.title}</h3>
-            <p>{phase.description}</p>
+            <h3 className="font-bold text-xl mb-2">{phase.title}</h3>
+            <p className='font-bold text-lg mb-2'>{phase.description1}</p>
+            <p className='mb-1'>{phase.description2}</p>
+            <p className='mb-1'>{phase.description3}</p>
+            <p className='mb-1'>{phase.description4}</p>
           </motion.div>
         ))}
       </div>

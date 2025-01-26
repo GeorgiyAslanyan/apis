@@ -16,7 +16,7 @@ const About = () => {
         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }} // Задержка для текста
       >
         <p className="mb-8">
-          apis is a platform where businesses and users gain opportunities for mutually beneficial collaboration within the multimillion-user ecosystems of TON and Telegram.
+        The APIS protocol offers not only access to trading alerts but also additional benefits through its profit-sharing system, enabling users to earn passive income.
         </p>
 
         {/* Анимация для кнопок */}

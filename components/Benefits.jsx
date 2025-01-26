@@ -16,28 +16,28 @@ const Benefits = () => {
 
   return (
     <section className="py-16 bg-white" id="benefits">
-      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8"><TypedTextOne text={"Benefits"}/></h2>
+      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8"><TypedTextOne text={"Tokenomics"}/></h2>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         {[
           {
-            title: 'User - Partner / Client',
+            title: 'DEX Liquidity',
             description:
-              'Impacts on healthy, completing advertising tasks. The performer is likely to become a client and due to positive experience and professional interaction.',
+              '90%',
           },
           {
-            title: 'MLM Principle',
+            title: 'Development',
             description:
-              'Selection from performance structure as payment system and strong advertising outcomes.',
+              '4%',
           },
           {
-            title: 'High Level of Trust',
+            title: 'Marketing ',
             description:
-              'New talent performers visible comparing advertising tasks, connected to advertisers to their personal networks.',
+              '4%',
           },
           {
-            title: 'Visible to All',
+            title: 'Team',
             description:
-              'Indicates that this advertisement is visible to all users, including Premium members.',
+              '2%',
           },
         ].map((block, index) => (
           <motion.div
@@ -49,7 +49,7 @@ const Benefits = () => {
             transition={{duration:0.6,  delay: index * 0.2 }} // Добавляем задержку для каждого блока
           >
             <h3 className="text-2xl font-semibold mb-4">{block.title}</h3>
-            <p>{block.description}</p>
+            <p className='text-2xl text-teal-500'>{block.description}</p>
           </motion.div>
         ))}
       </div>
