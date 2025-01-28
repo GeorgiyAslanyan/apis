@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={manrope.className + ` antialiased relative bg-white text-black max-w-[100vw]`}
+        className={manrope.className + `overflow-hidden antialiased relative bg-[#111631] text-white max-w-[100vw]`}
       ><Navbar/>
         {children}
       </body>

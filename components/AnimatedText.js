@@ -7,7 +7,7 @@ const AnimatedText = () => {
 
   useEffect(() => {
     const options = {
-      strings: ['Every trade count'],
+      strings: ['Every trade counts //'],
       typeSpeed: 30,
       backSpeed: 30,
       backDelay: 4000, // Задержка перед стиранием текста (2 секунды)

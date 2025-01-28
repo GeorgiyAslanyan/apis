@@ -2,41 +2,55 @@
 import React from 'react'
 import TypedTextOne from './TypedTextOnce'
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const About = () => {
-    return (
-        <section className="py-16 bg-white" id="about">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8"><TypedTextOne text={"About apis"}/></h2>
-        {/* Анимация для текста */}
+  return (
+    <section className="py-16 px-4 flex flex-col z-[2]" id="about">
+
       <motion.div
-        className="text-center max-w-3xl mx-auto"
+        className=" mx-auto grid grid-cols-1 md:grid-cols-2 gap-20  z-[2]"
         initial={{ opacity: 0, y: 20 }} // Начальное состояние (невидим и смещен вниз)
         whileInView={{ opacity: 1, y: 0 }} // Анимация при появлении в области видимости
         viewport={{ once: true }} // Анимация сработает только один раз
         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }} // Задержка для текста
       >
-        <p className="mb-8">
-        The APIS protocol offers not only access to trading alerts but also additional benefits through its profit-sharing system, enabling users to earn passive income.
-        </p>
-
-        {/* Анимация для кнопок */}
-        <motion.div
-          className="flex justify-center space-x-6"
-          initial={{ opacity: 0, y: 20 }} // Начальное состояние (невидим и смещен вниз)
-          whileInView={{ opacity: 1, y: 0 }} // Анимация при появлении в области видимости
-          viewport={{ once: true }} // Анимация сработает только один раз
-          transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }} // Задержка для кнопок
-        >
-          <a href="#documentation" className="leading-1 content-center px-6 py-3 border-2 border-teal-500 text-teal-500 rounded-full hover:bg-teal-500 hover:text-white">
-            Documentation
-          </a>
-          <a href="#contactus" className="leading-1 content-center px-6 py-3 bg-teal-500 text-white rounded-full hover:bg-teal-600">
-            Contact Us
-          </a>
-        </motion.div>
+        <div className='flex flex-col'>
+          <div className="flex font-bold items-center">
+            <Image alt="logo image" className='-ml-2' src={'/logo.PNG'} width={61} height={49} /> <p className='text-xl'>APIS</p>
+          </div>
+          <p className='pt-3 pb-10'>The APIS protocol offers not only access to trading alerts but also additional benefits through its profit-sharing system, enabling users to earn passive income</p>
+          <div className="flex  items-center justify-start gap-5 ">
+            <a href="#getstarted" className="px-4 py-3 w-fit bg-[#485390CC] text-white rounded-xl hover:bg-[#596bd0cc] ease-linear duration-100 transition-all">
+              Documentation
+            </a>
+            <a href="#getstarted" className="px-4 py-3 w-fit bg-[#485390CC] text-white rounded-xl hover:bg-[#596bd0cc] ease-linear duration-100 transition-all">
+              Contact Us
+            </a>
+          </div>
+        </div>
+        <div className='bg-[#48539050] rounded-xl grid grid-cols-1 md:grid-cols-2 p-7'>
+          <div className='flex flex-col items-start justify-between'>
+            <p className='font-medium text-2xl'>Join our community!</p>
+            <div className='flex gap-4 justify-start'>
+              <a className='rounded-full bg-[#48539080] w-14 h-14 flex items-center justify-center hover:bg-[#596bd0cc] ease-linear duration-100 transition-all' href="http://" target="_blank" rel="noopener noreferrer">
+              <Image src="/about/x.svg" width={24} height={24} alt='x'/>
+              </a>
+              <a className='rounded-full bg-[#48539080] w-14 h-14 flex items-center justify-center hover:bg-[#596bd0cc] ease-linear duration-100 transition-all' href="http://" target="_blank" rel="noopener noreferrer">
+              <Image src="/about/tg.svg" width={24} height={24} alt='tg'/>
+              </a>
+              <a className='rounded-full bg-[#48539080] w-14 h-14 flex items-center justify-center hover:bg-[#596bd0cc] ease-linear duration-100 transition-all' href="http://" target="_blank" rel="noopener noreferrer">
+              <Image src="/about/medium.svg" width={24} height={24} alt='md'/>
+              </a>
+            </div>
+          </div>
+          <div className='flex items-center justify-center'>
+          <Image src="/about/group.svg" width={643} height={358} alt='group'/>
+          </div>
+        </div>
       </motion.div>
-      </section>
-    )
+    </section>
+  )
 }
 
 export default About

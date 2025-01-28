@@ -6,7 +6,7 @@ const TypedTextOne = ({ text }) => {
 
   return (
     <motion.div
-      className='flex flex-wrap justify-center max-w-full'
+      className='flex flex-wrap justify-center max-w-full '
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }} // Анимация сработает только один раз, когда элемент будет виден на 50%
