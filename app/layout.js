@@ -9,8 +9,8 @@ const manrope = Manrope({
 });
 
 export const metadata = {
-  title: "APIS",
-  description: "APIS",
+  title: "aiAPIS | Algorithmic Trading",
+  description: "aiAPIS | Algorithmic Trading",
 };
 
 export default function RootLayout({ children }) {
@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
       ><Navbar/>
         {children}
       </body>
+      
     </html>
   );
 }

@@ -1,14 +1,15 @@
 'use client'; // Убедитесь, что компонент выполняется на стороне клиента
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import AnimatedText from './AnimatedText';
 import Image from 'next/image';
 
 const Hero = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
   return (
     <motion.section
-      className="pt-[70px] m-6 z-[2]"
+      className="pt-[70px] m-0 sm:m-6 z-[2]"
       id="whatis"
       style={{ minHeight: 'calc(100vh - 70px)' }}
       initial={{ opacity: 0 }} // Начальное состояние (невидим)
@@ -27,11 +28,11 @@ const Hero = () => {
         <a href="#getstarted" className="px-4 py-3 bg-[#485390CC] text-white rounded-xl hover:bg-[#596bd0cc] ease-linear duration-100 transition-all">
         Documentation
         </a>
-        <a href="#getstarted" className="px-4 py-3 bg-[#485390CC] text-white rounded-xl hover:bg-[#596bd0cc] ease-linear duration-100 transition-all">
+        <button onClick={() => setIsModalOpen(true)} className="px-4 py-3 bg-[#485390CC] text-white rounded-xl hover:bg-[#596bd0cc] ease-linear duration-100 transition-all">
         Start Earning
-        </a>
+        </button>
       </div>
-      <div className='grid grid-cols-3 gap-20 items-center justify-center w-fit  z-[2]'>
+      <div className='grid grid-cols-3 gap-5 sm:gap-20 items-center justify-center w-fit  z-[2]'>
         <motion.div initial={{ opacity: 0, scale: 0.5 }} // Начальное состояние (невидим и уменьшен)
             whileInView={{ opacity: 1, scale: 1 }} // Анимация при появлении в области видимости
             viewport={{ once: true }} // Анимация сработает только один раз
@@ -42,8 +43,8 @@ const Hero = () => {
               stiffness: 30, // Жесткость пружины
               damping: 10, // Затухание
             }} className='flex flex-col items-center gap-4'>
-          <p className='font-medium opacity-50 text-[22px]'>$20,000.00</p>
-          <p className='font-semibold text-2xl'>Initial Balance</p>
+          <p className='font-medium opacity-50 text-sm sm:text-[22px]'>$20,000.00</p>
+          <p className='font-semibold text-sm sm:text-2xl'>Initial Balance</p>
         </motion.div>
         <motion.div initial={{ opacity: 0, scale: 0.5 }} // Начальное состояние (невидим и уменьшен)
             whileInView={{ opacity: 1, scale: 1 }} // Анимация при появлении в области видимости
@@ -55,8 +56,8 @@ const Hero = () => {
               stiffness: 30, // Жесткость пружины
               damping: 10, // Затухание
             }} className='flex flex-col items-center gap-4'>
-          <p className='font-medium opacity-50 text-[22px]'>+45.77%</p>
-          <p className='font-semibold text-2xl'>Percentage Change</p>
+          <p className='font-medium opacity-50 text-sm sm:text-[22px]'>+45.77%</p>
+          <p className='font-semibold text-sm sm:text-2xl'>Percentage Change</p>
         </motion.div>
         <motion.div initial={{ opacity: 0, scale: 0.5 }} // Начальное состояние (невидим и уменьшен)
             whileInView={{ opacity: 1, scale: 1 }} // Анимация при появлении в области видимости
@@ -68,11 +69,17 @@ const Hero = () => {
               stiffness: 30, // Жесткость пружины
               damping: 10, // Затухание
             }} className='flex flex-col items-center gap-4'>
-          <p className='font-medium opacity-50 text-[22px]'>$29,153.32</p>
-          <p className='font-semibold text-2xl'>Current Balance</p>
+          <p className='font-medium opacity-50 text-sm sm:text-[22px]'>$29,153.32</p>
+          <p className='font-semibold text-sm sm:text-2xl'>Current Balance</p>
         </motion.div>
       </div>
       </div>
+      {isModalOpen && <div onClick={() => setIsModalOpen(false)} className='fixed top-0 left-0 w-full h-full flex flex-col z-[3] items-center justify-center backdrop-blur-lg'>
+            <div className='px-11 py-7 rounded-xl bg-[#00000080] font-semibold text-lg relative'>
+              <p>comming soon</p>
+              <button className='absolute top-2 right-2 rounded-full min-h-5 min-w-5 leading-none flex items-center justify-center bg-[#485390CC] text-white hover:bg-[#596bd0cc]'>-</button>
+            </div>
+      </div>}
     </motion.section>
   );
 };

@@ -30,7 +30,7 @@ const WhatIs = () => {
       <div className="flex flex-col md:flex-row justify-center gap-8  z-[2]">
         {/* Первый блок */}
         <motion.div
-          className="bg-[#121B37] px-8 py-16 shadow-lg rounded-2xl w-full md:w-[45%] text-start mb-6 md:mb-0"
+          className="bg-[#121B37] px-3 md:px-8 py-8 sm:py-16 shadow-lg rounded-2xl w-full md:w-[45%] text-start mb-6 md:mb-0"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
@@ -42,7 +42,7 @@ const WhatIs = () => {
 
         {/* Второй блок */}
         <motion.div
-          className="bg-[#48539080] px-8 py-16 shadow-lg rounded-2xl w-full md:w-[45%] text-start"
+          className="bg-[#48539080] px-3 md:px-8 py-8 sm:py-16 shadow-lg rounded-2xl w-full md:w-[45%] text-start"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
