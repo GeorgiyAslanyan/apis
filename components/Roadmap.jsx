@@ -57,7 +57,7 @@ const Roadmap = () => {
         ].map((phase, index) => (
           <motion.div
             key={index}
-            className="relative bg-[#0D1327] overflow-hidden h-fit p-6 rounded-xl shadow-lg flex flex-col justify-between z-[2]"
+            className="relative bg-[#0D1327] overflow-hidden min-h-[240px] h-fit p-6 rounded-xl shadow-lg flex flex-col justify-between z-[2]"
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
