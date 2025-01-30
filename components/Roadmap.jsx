@@ -22,7 +22,7 @@ const Roadmap = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3 transition-all ease-linear duration-100">
         {[
           {
-            phase: 'Phase I (Q1 2025)',
+            phase: 'Phase I (Q4 2024 - Q1 2025)',
             title: 'Public Demonstration of Efficiency',
             description: <>Launching a trading account on ByBIT with a $20,000 capital <br />
               Integration with the Telegram bot for publishing real-time trading alerts and reports <br />
@@ -44,7 +44,7 @@ const Roadmap = () => {
               Trading using the community account, with profits distributed among token holders participating in staking
             </>,
           }, {
-            phase: 'Phase IV (Q2 - Q3 2025)',
+            phase: 'Phase IV (Q2 - Q4 2025)',
             title: 'Expanding the Ecosystem',
             description: <>
               Providing holders with access to aiAPIS via an API protocol, enabling them to connect their personal account on ByBIT with permissions limited to trading on behalf of the owner, without authorization for fund withdrawals <br />
@@ -84,7 +84,7 @@ const Roadmap = () => {
                 </motion.div>
                 <button
                   onClick={() => setIsFirstOpen(!isFirstOpen)}
-                  className={`${isFirstOpen ? "rotate-180" : "rotate-0"} transition-all ease-linear duration-100 bg-[#00000050] rounded-full absolute right-2 bottom-2 flex items-center justify-center leading-none w-7 h-7`}
+                  className={`${isFirstOpen ? "rotate-180" : "rotate-0"} transition-all ease-linear duration-100 bg-[#485390CC] rounded-full absolute right-2 bottom-2 flex items-center justify-center leading-none w-7 h-7`}
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
@@ -107,7 +107,7 @@ const Roadmap = () => {
                 <p className='mt-4 font-medium opacity-50'>{phase.phase}</p>
                 <button
                   onClick={() => setIsSecondOpen(!isSecondOpen)}
-                  className={`${isSecondOpen ? "rotate-180" : "rotate-0"} transition-all ease-linear duration-100 bg-[#00000050] rounded-full absolute right-2 bottom-2 flex items-center justify-center leading-none w-7 h-7`}
+                  className={`${isSecondOpen ? "rotate-180" : "rotate-0"} transition-all ease-linear duration-100 bg-[#485390CC] rounded-full absolute right-2 bottom-2 flex items-center justify-center leading-none w-7 h-7`}
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
@@ -130,7 +130,7 @@ const Roadmap = () => {
                 </motion.div>
                 <button
                   onClick={() => setIsThirdOpen(!isThirdOpen)}
-                  className={`${isThirdOpen ? "rotate-180" : "rotate-0"} transition-all ease-linear duration-100 bg-[#00000050] rounded-full absolute right-2 bottom-2 flex items-center justify-center leading-none w-7 h-7`}
+                  className={`${isThirdOpen ? "rotate-180" : "rotate-0"} transition-all ease-linear duration-100 bg-[#485390CC] rounded-full absolute right-2 bottom-2 flex items-center justify-center leading-none w-7 h-7`}
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
@@ -153,7 +153,7 @@ const Roadmap = () => {
                 <p className='mt-4 font-medium opacity-50'>{phase.phase}</p>
                 <button
                   onClick={() => setIsFourOpen(!isFourOpen)}
-                  className={`${isFourOpen ? "rotate-180" : "rotate-0"} transition-all ease-linear duration-100 bg-[#00000050] rounded-full absolute right-2 bottom-2 flex items-center justify-center leading-none w-7 h-7`}
+                  className={`${isFourOpen ? "rotate-180" : "rotate-0"} transition-all ease-linear duration-100 bg-[#485390CC] rounded-full absolute right-2 bottom-2 flex items-center justify-center leading-none w-7 h-7`}
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />

@@ -4,25 +4,38 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
+async function getData() {
+  const query = `https://jbrgprzz.api.sanity.io/v1/data/query/production?query=*%5B_type+%3D%3D+%27Navbar%27%5D%5B0%5D`;
+  const data = await fetch(query, {next: {revalidate: 60}}).then(res => res.json());
+      return data.result
+}
+
+
 const Navbar = () => {
+  const [data, setData] = useState(null); // Добавили состояние для данных
   const [isScrolled, setIsScrolled] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+    // Загружаем данные при монтировании компонента
+    const fetchData = async () => {
+      const result = await getData();
+      setData(result);
     };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    fetchData();
   }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  if (!data) {
+    return <div>Loading...</div>; // Или другой индикатор загрузки
+  }
 
   return (
     <motion.header
@@ -55,8 +68,8 @@ const Navbar = () => {
       </nav>
       
       <div className="flex gap-3 items-center">
-        <a href="#getstarted" className="px-4 py-1 md:py-3 bg-[#485390CC] text-white rounded-xl hover:bg-[#596bd0cc] ease-linear duration-100 transition-all">
-          Buy on Uniswap
+        <a href={data.ButtonLink && data.ButtonLink} className="px-4 py-1 md:py-3 bg-[#485390CC] text-white rounded-xl hover:bg-[#596bd0cc] ease-linear duration-100 transition-all">
+          {data.Button && data.Button}
         </a>
       </div>
       {/* Mobile menu */}

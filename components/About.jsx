@@ -1,10 +1,25 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import TypedTextOne from './TypedTextOnce'
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-const About = () => {
+async function getData() {
+  const query = `https://jbrgprzz.api.sanity.io/v1/data/query/production?query=*%5B_type+%3D%3D+%27Contacts%27%5D%5B0%5D`;
+  const data = await fetch(query, {next: {revalidate: 60}}).then(res => res.json());
+      return data.result
+}
+
+const About = () => {  
+    const [data, setData] = useState(null); // Добавили состояние для данных
+useEffect(() => {
+      // Загружаем данные при монтировании компонента
+      const fetchData = async () => {
+        const result = await getData();
+        setData(result);
+      };
+      fetchData();
+    }, []);
   return (
     <section className="py-16 px-4 flex flex-col z-[2]" id="about">
 
@@ -21,10 +36,10 @@ const About = () => {
           </div>
           <p className='pt-3 pb-10 z-[2]'>The APIS protocol offers not only access to trading alerts but also additional benefits through its profit-sharing system, enabling users to earn passive income</p>
           <div className="flex z-[2] items-center justify-start gap-5 ">
-            <a href="#getstarted" className="px-4 py-3 w-fit bg-[#485390CC] text-white rounded-xl hover:bg-[#596bd0cc] ease-linear duration-100 transition-all">
+            <a href={data?.Documentation} className="px-4 py-3 w-fit bg-[#485390CC] text-white rounded-xl hover:bg-[#596bd0cc] ease-linear duration-100 transition-all">
               Documentation
             </a>
-            <a href="mailto:team@aiapis.trade" className="px-4 py-3 w-fit bg-[#485390CC] text-white rounded-xl hover:bg-[#596bd0cc] ease-linear duration-100 transition-all">
+            <a href={data?.ContactUs} className="px-4 py-3 w-fit bg-[#485390CC] text-white rounded-xl hover:bg-[#596bd0cc] ease-linear duration-100 transition-all">
               Contact Us
             </a>
           </div>

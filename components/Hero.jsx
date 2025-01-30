@@ -1,12 +1,28 @@
 'use client'; // Убедитесь, что компонент выполняется на стороне клиента
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import AnimatedText from './AnimatedText';
 import Image from 'next/image';
 
+async function getData() {
+  const query = `https://jbrgprzz.api.sanity.io/v1/data/query/production?query=*%5B_type+%3D%3D+%27hero%27%5D%5B0%5D`;
+  const data = await fetch(query, {next: {revalidate: 60}}).then(res => res.json());
+      return data.result
+}
+
 const Hero = () => {
+    const [data, setData] = useState(null); // Добавили состояние для данных
   const [isModalOpen, setIsModalOpen] = useState(false)
+  useEffect(() => {
+      // Загружаем данные при монтировании компонента
+      const fetchData = async () => {
+        const result = await getData();
+        setData(result);
+      };
+      fetchData();
+    }, []);
+
   return (
     <motion.section
       className="pt-[70px] m-0 sm:m-6 z-[2]"
@@ -25,7 +41,7 @@ const Hero = () => {
           <AnimatedText />
         </h1>
         <div className="grid grid-cols-2  items-center justify-center gap-9  z-[2]">
-        <a href="#getstarted" className="px-4 py-3 bg-[#485390CC] text-white rounded-xl hover:bg-[#596bd0cc] ease-linear duration-100 transition-all">
+        <a href={data?.FirstButton} className="px-4 py-3 bg-[#485390CC] text-white rounded-xl hover:bg-[#596bd0cc] ease-linear duration-100 transition-all">
         Documentation
         </a>
         <button onClick={() => setIsModalOpen(true)} className="px-4 py-3 bg-[#485390CC] text-white rounded-xl hover:bg-[#596bd0cc] ease-linear duration-100 transition-all">
@@ -43,7 +59,7 @@ const Hero = () => {
               stiffness: 30, // Жесткость пружины
               damping: 10, // Затухание
             }} className='flex flex-col items-center gap-4'>
-          <p className='font-medium opacity-50 text-sm sm:text-[22px]'>$20,000.00</p>
+          <p className='font-medium opacity-50 text-sm sm:text-[22px]'>{data?.FirstTable}</p>
           <p className='font-semibold text-sm sm:text-2xl'>Initial Balance</p>
         </motion.div>
         <motion.div initial={{ opacity: 0, scale: 0.5 }} // Начальное состояние (невидим и уменьшен)
@@ -56,7 +72,7 @@ const Hero = () => {
               stiffness: 30, // Жесткость пружины
               damping: 10, // Затухание
             }} className='flex flex-col items-center gap-4'>
-          <p className='font-medium opacity-50 text-sm sm:text-[22px]'>+45.77%</p>
+          <p className='font-medium opacity-50 text-sm sm:text-[22px]'>{data?.SecondTable}</p>
           <p className='font-semibold text-sm sm:text-2xl'>Percentage Change</p>
         </motion.div>
         <motion.div initial={{ opacity: 0, scale: 0.5 }} // Начальное состояние (невидим и уменьшен)
@@ -69,7 +85,7 @@ const Hero = () => {
               stiffness: 30, // Жесткость пружины
               damping: 10, // Затухание
             }} className='flex flex-col items-center gap-4'>
-          <p className='font-medium opacity-50 text-sm sm:text-[22px]'>$29,153.32</p>
+          <p className='font-medium opacity-50 text-sm sm:text-[22px]'>{data?.ThirdTable}</p>
           <p className='font-semibold text-sm sm:text-2xl'>Current Balance</p>
         </motion.div>
       </div>

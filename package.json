@@ -9,11 +9,25 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@portabletext/react": "^3.2.0",
+    "@sanity/image-url": "^1.1.0",
+    "@sanity/vision": "^3.72.1",
+    "axios": "^1.7.9",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
     "framer-motion": "^12.0.5",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.12.0",
+    "mongoose": "^8.9.5",
     "next": "15.1.6",
+    "next-auth": "^4.24.11",
+    "next-sanity": "^9.8.46",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-intersection-observer": "^9.15.1",
+    "sanity": "^3.72.1",
+    "styled-components": "^6.1.14",
+    "toastify": "^2.0.1",
     "typed.js": "^2.1.0"
   },
   "devDependencies": {
