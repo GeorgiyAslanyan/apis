@@ -34,13 +34,13 @@ const Navbar = () => {
   }, []);
 
   if (!data) {
-    return <div>Loading...</div>; // Или другой индикатор загрузки
+    return <div></div>; // Или другой индикатор загрузки
   }
 
   return (
     <motion.header
       className={`transition-all ease-linear duration-100 fixed top-0 z-[100] w-full flex flex-col justify-between items-center px-6 py-3 font-semibold max-w-[100vw] ${
-        isScrolled ? 'backdrop-blur-md' : ''
+        (isNavOpen || isScrolled) ? 'backdrop-blur-md' : ''
       }`}
       initial={{ y: -100 }} // Начальное положение (за пределами видимой области сверху)
       animate={{ y: 0 }} // Конечное положение (опускается вниз)

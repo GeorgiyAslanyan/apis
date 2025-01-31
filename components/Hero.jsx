@@ -60,7 +60,7 @@ const Hero = () => {
               damping: 10, // Затухание
             }} className='flex flex-col items-center gap-4'>
           <p className='font-medium opacity-50 text-sm sm:text-[22px]'>{data?.FirstTable}</p>
-          <p className='font-semibold text-sm sm:text-2xl'>Initial Balance</p>
+          <p className='font-semibold text-sm sm:text-2xl min-h-10'>Initial Balance</p>
         </motion.div>
         <motion.div initial={{ opacity: 0, scale: 0.5 }} // Начальное состояние (невидим и уменьшен)
             whileInView={{ opacity: 1, scale: 1 }} // Анимация при появлении в области видимости
@@ -73,7 +73,7 @@ const Hero = () => {
               damping: 10, // Затухание
             }} className='flex flex-col items-center gap-4'>
           <p className='font-medium opacity-50 text-sm sm:text-[22px]'>{data?.SecondTable}</p>
-          <p className='font-semibold text-sm sm:text-2xl'>Percentage Change</p>
+          <p className='font-semibold text-sm sm:text-2xl min-h-10'>Percentage Change</p>
         </motion.div>
         <motion.div initial={{ opacity: 0, scale: 0.5 }} // Начальное состояние (невидим и уменьшен)
             whileInView={{ opacity: 1, scale: 1 }} // Анимация при появлении в области видимости
@@ -86,7 +86,7 @@ const Hero = () => {
               damping: 10, // Затухание
             }} className='flex flex-col items-center gap-4'>
           <p className='font-medium opacity-50 text-sm sm:text-[22px]'>{data?.ThirdTable}</p>
-          <p className='font-semibold text-sm sm:text-2xl'>Current Balance</p>
+          <p className='font-semibold text-sm sm:text-2xl min-h-10'>Current Balance</p>
         </motion.div>
       </div>
       </div>

@@ -8,7 +8,7 @@ const HowItWorks = () => {
 
 
   return (
-    <section className="py-16 items-center flex flex-col rounded-xl" id="howitworks">
+    <section className="py-0 sm:py-16 items-center flex flex-col rounded-xl" id="howitworks">
       <h2 className="text-3xl sm:text-5xl font-semibold flex  z-[2] text-center mb-14"><TypedTextOne text={"How it works //"} /></h2>
       <motion.div className='flex z-[2]'
       initial={{ opacity: 0 }} // Начальное состояние (невидим)

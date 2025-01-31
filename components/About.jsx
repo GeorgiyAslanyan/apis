@@ -21,10 +21,10 @@ useEffect(() => {
       fetchData();
     }, []);
   return (
-    <section className="py-16 px-4 flex flex-col z-[2]" id="about">
+    <section className="py-10 sm:py-16 px-4 flex flex-col z-[2]" id="about">
 
       <motion.div
-        className=" mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 "
+        className=" mx-auto grid grid-cols-1 md:grid-cols-2 gap-9 sm:gap-20 "
         initial={{ opacity: 0, y: 20 }} // Начальное состояние (невидим и смещен вниз)
         whileInView={{ opacity: 1, y: 0 }} // Анимация при появлении в области видимости
         viewport={{ once: true }} // Анимация сработает только один раз
@@ -34,7 +34,7 @@ useEffect(() => {
           <div className="flex font-bold items-center z-[2]">
             <Image alt="logo image" className='-ml-2' src={'/logo.PNG'} width={61} height={49} /> <p className='text-xl'>APIS</p>
           </div>
-          <p className='pt-3 pb-10 z-[2]'>The APIS protocol offers not only access to trading alerts but also additional benefits through its profit-sharing system, enabling users to earn passive income</p>
+          <p className='pt-3 pb-5 sm:pb-10 z-[2]'>The APIS protocol offers not only access to trading alerts but also additional benefits through its profit-sharing system, enabling users to earn passive income</p>
           <div className="flex z-[2] items-center justify-start gap-5 ">
             <a href={data?.Documentation} className="px-4 py-3 w-fit bg-[#485390CC] text-white rounded-xl hover:bg-[#596bd0cc] ease-linear duration-100 transition-all">
               Documentation
@@ -59,7 +59,7 @@ useEffect(() => {
               </a>
             </div>
           </div>
-          <div className='flex items-center justify-center'>
+          <div className='flex items-center justify-center z-[2]'>
           <Image src="/about/group.svg" width={643} height={358} alt='group'/>
           </div>
         </div>
