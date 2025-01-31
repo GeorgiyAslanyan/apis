@@ -92,7 +92,7 @@ const Hero = () => {
       </div>
       {isModalOpen && <div onClick={() => setIsModalOpen(false)} className='fixed top-0 left-0 w-full h-full flex flex-col z-[3] items-center justify-center backdrop-blur-lg'>
             <div className='px-11 py-7 rounded-xl bg-[#00000080] font-semibold text-lg relative'>
-              <p>comming soon</p>
+              <p>Coming soon //</p>
               <button className='absolute top-2 right-2 rounded-full min-h-5 min-w-5 leading-none flex items-center justify-center bg-[#485390CC] text-white hover:bg-[#596bd0cc]'>-</button>
             </div>
       </div>}
