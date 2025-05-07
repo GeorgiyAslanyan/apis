@@ -51,7 +51,7 @@ useEffect(() => {
               <a className='rounded-full bg-[#48539080] w-14 h-14 flex items-center justify-center hover:bg-[#596bd0cc] ease-linear duration-100 transition-all' href="https://x.com/aiapistrade" target="_blank" rel="noopener noreferrer">
               <Image src="/about/x.svg" width={24} height={24} alt='x'/>
               </a>
-              <a className='rounded-full bg-[#48539080] w-14 h-14 flex items-center justify-center hover:bg-[#596bd0cc] ease-linear duration-100 transition-all' href="https://t.me/apistrade" target="_blank" rel="noopener noreferrer">
+              <a className='rounded-full bg-[#48539080] w-14 h-14 flex items-center justify-center hover:bg-[#596bd0cc] ease-linear duration-100 transition-all' href="https://t.me/aiapistrade" target="_blank" rel="noopener noreferrer">
               <Image src="/about/tg.svg" width={24} height={24} alt='tg'/>
               </a>
               <a className='rounded-full bg-[#48539080] w-14 h-14 flex items-center justify-center hover:bg-[#596bd0cc] ease-linear duration-100 transition-all' href="https://medium.com/@aiapistrade/apis-protocol-the-magic-wand-of-tomorrow-d4be1cf91e5b" target="_blank" rel="noopener noreferrer">
