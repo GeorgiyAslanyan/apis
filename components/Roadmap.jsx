@@ -44,7 +44,7 @@ const Roadmap = () => {
               Trading using the community account, with profits distributed among token holders participating in staking
             </>,
           }, {
-            phase: 'Phase IV (Q3 2025 - Q4 2025',
+            phase: 'Phase IV (Q3 2025 - Q4 2025)',
             title: 'Expanding the Ecosystem',
             description: <>
               Providing holders with access to aiAPIS via an API protocol, enabling them to connect their personal account on ByBIT with permissions limited to trading on behalf of the owner, without authorization for fund withdrawals <br />
