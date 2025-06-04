@@ -48,7 +48,7 @@ useEffect(() => {
           <div className='flex flex-col items-start justify-between gap-5 z-[2]'>
             <p className='font-medium text-2xl'>Join our community!</p>
             <div className='flex gap-4 justify-start'>
-              <a className='rounded-full bg-[#48539080] w-14 h-14 flex items-center justify-center hover:bg-[#596bd0cc] ease-linear duration-100 transition-all' href="https://x.com/aiapisreports" target="_blank" rel="noopener noreferrer">
+              <a className='rounded-full bg-[#48539080] w-14 h-14 flex items-center justify-center hover:bg-[#596bd0cc] ease-linear duration-100 transition-all' href="https://x.com/aiapistrade" target="_blank" rel="noopener noreferrer">
               <Image src="/about/x.svg" width={24} height={24} alt='x'/>
               </a>
               <a className='rounded-full bg-[#48539080] w-14 h-14 flex items-center justify-center hover:bg-[#596bd0cc] ease-linear duration-100 transition-all' href="https://t.me/aiapistrade" target="_blank" rel="noopener noreferrer">
