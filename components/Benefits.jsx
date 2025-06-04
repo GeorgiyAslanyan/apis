@@ -36,7 +36,7 @@ const Benefits = () => {
       <h2 className="text-3xl sm:text-5xl font-semibold text-center flex z-[2] "><TypedTextOne text={"Tokenomics //"}/></h2>
       <div className='flex flex-col sm:flex-row  items-center gap-4 my-9 sm:my-20 z-[2]'>
         <p className='font-semibold opacity-50 text-2xl'>Contract Address:</p>
-        <p style={{overflowWrap: "anywhere"}} className='font-medium text-2xl'>{data?.ContractAdress}</p>
+        <p style={{overflowWrap: "anywhere"}} className='font-medium text-2xl'>{data?.ContractAddress}</p>
         </div>
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-9 sm:gap-20 items-center justify-center w-fit z-[2]'>
         <div className='flex flex-col items-center gap-4 z-[2] '>
