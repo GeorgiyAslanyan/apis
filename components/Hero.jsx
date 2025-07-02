@@ -44,9 +44,9 @@ const Hero = () => {
         <a href={data?.FirstButton} className="px-4 py-3 bg-[#485390CC] text-white rounded-xl hover:bg-[#596bd0cc] ease-linear duration-100 transition-all">
         Documentation
         </a>
-        <button onClick={() => setIsModalOpen(true)} className="px-4 py-3 bg-[#485390CC] text-white rounded-xl hover:bg-[#596bd0cc] ease-linear duration-100 transition-all">
+          <a href={data?.SecondButton} className="px-4 py-3 bg-[#485390CC] text-white rounded-xl hover:bg-[#596bd0cc] ease-linear duration-100 transition-all">
         Start Earning
-        </button>
+        </a>
       </div>
       <div className='grid grid-cols-3 gap-5 sm:gap-20 items-center justify-center w-fit  z-[2]'>
         <motion.div initial={{ opacity: 0, scale: 0.5 }} // Начальное состояние (невидим и уменьшен)
